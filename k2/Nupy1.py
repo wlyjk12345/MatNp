@@ -1,7 +1,8 @@
 from numpy import *
 ''''''
-a = eye(2,2)
-print(a.dtype.name)
+a = eye(2,2,dtype=uint8)  #无符号整数
+_= float32(a)
+print(_.dtype.name)
 print(a)   #eye / zeros /ones /empty
 #b =  arange(15).reshape(3,5)
 b = arange(0,4,0.5)
@@ -9,7 +10,9 @@ print(b)
 print(b.shape)  #dtype.name  / size /shape
 c = array(([6, 7, 8],[1.5,2,44]))#, dtype=complex)
 print(c)
-d = linspace(0,3,9)
+d = c > 4
+print(d)
+'''d = linspace(0,3,9)
 print(d)
 e = a @ c
 print(e)  # @矩阵乘  *点乘　
@@ -24,3 +27,4 @@ f = c.sum(axis=0)
 print(f)
 e =b[:2].copy
 print(e)
+'''
