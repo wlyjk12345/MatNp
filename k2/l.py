@@ -7,7 +7,7 @@ class Application(Frame):
         self.pack()
         self.createWidgets()
     def createWidgets(self):
-        self.helloLabel = Label(self, text='输入未知数个数 \n起始与末尾都不要打空格!')  # 标签
+        self.helloLabel = Label(self, text='输入未知数个数 如3 \n起始与末尾都不要打空格!')  # 标签
         self.helloLabel.pack()
         self.expression = Entry(self)  # 单行文本框
         self.expression.pack()
@@ -15,7 +15,7 @@ class Application(Frame):
         self.helloLabel.pack()
         self.expression1 = Entry(self)  # 单行文本框
         self.expression1.pack()
-        self.helloLabel2 = Label(self, text='输入B 请按列输入 \n每个数间以空格间断 如3 3 4!')  # 标签
+        self.helloLabel2 = Label(self, text='输入AX=B中B 请按列输入 \n每个数间以空格间断 如3 3 4!')  # 标签
         self.helloLabel2.pack()
         self.expression2 = Entry(self)  # 单行文本框
         self.expression2.pack()
@@ -136,8 +136,7 @@ class Application(Frame):
         k = column_stack((u, d))
         d3 = counter(k, Numble)
         if t == 0:
-            messagebox.showinfo('gaussResult', '解为%s\n出nan表无唯一解' %d2 )
-            messagebox.showinfo('triResult', '解为%s\n出nan表无唯一解' %d3)
+            messagebox.showinfo('Result', '列主元消去法解为%s\n直接三角分解解为%s\n出nan表无唯一解' %(d2,d3) )
         else:
             messagebox.showinfo('error')
 
